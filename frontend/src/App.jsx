@@ -7,7 +7,7 @@ const CODE = `<span class="k">const</span> <span class="v">haritha</span> = {
   stack: [<span class="s">"React"</span>, <span class="s">"NestJS"</span>,
     <span class="s">"PostgreSQL"</span>],
   auth: <span class="s">"JWT + RBAC"</span>,
-  apps: <span class="n">7</span>,
+  projects: <span class="n">7</span>,
   openToWork: <span class="b">true</span>,
 };`
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -134,7 +134,7 @@ function Hero() {
         <h1>Hello, I’m<br />Haritha Shree G</h1>
         <p>
           I’m a <u>{role}</u><span className="caret" /> based in Erode, India. I build fast, user-friendly
-          web apps with React.js, NestJS and PostgreSQL, from clean interfaces to secure APIs, for real client businesses.
+          websites and apps with React.js, NestJS and PostgreSQL, from clean interfaces to secure APIs, for real client businesses.
         </p>
         <div className="row">
           <a className="btn" href="#contact">Say Hello!</a>
@@ -143,7 +143,7 @@ function Hero() {
         </div>
         <div className="stats">
           <div><Count to={1} suffix="+ Y." /><span>experience</span></div>
-          <div><Count to={7} suffix="+" /><span>apps built</span></div>
+          <div><Count to={7} suffix=" +" /><span>websites &amp; apps</span></div>
           <div><Count to={3} suffix="+" /><span>live clients</span></div>
         </div>
       </div>
@@ -175,7 +175,7 @@ const About = () => (
         <h2 className="sh">Building products people enjoy using.</h2>
       </div>
       <div {...aos('fade-left', 100)}>
-        <p>With over a year of experience, I develop and maintain full-stack web applications for live clients. I design JWT-secured REST APIs, integrate services like WhatsApp Business API and Google Maps, and create reusable, responsive interfaces.</p>
+        <p>With over a year of experience, I develop and maintain full-stack websites and apps for live clients. I design JWT-secured REST APIs, integrate services like WhatsApp Business API and Google Maps, and create reusable, responsive interfaces.</p>
         <p>I work well in Agile teams and have resolved 20+ production issues with an 88% on-time delivery rate.</p>
       </div>
     </div>
@@ -234,9 +234,9 @@ const Projects = () => (
 )
 
 const POINTS = [
-  'Built and maintained 7+ full-stack apps with React.js, NestJS, PostgreSQL and Prisma ORM, supporting 3+ live client projects.',
+  'Built and maintained 7 + full-stack websites and apps with React.js, NestJS, PostgreSQL and Prisma ORM, supporting 3+ live client projects.',
   'Designed secure REST APIs with JWT authentication and centralized error handling across 500+ records.',
-  'Created reusable, responsive UI components with React.js and Tailwind CSS, shared across all 7+ apps.',
+  'Created reusable, responsive UI components with React.js and Tailwind CSS, shared across all 7 + projects.',
   'Resolved 20+ production issues with 5+ senior developers, reaching 88% on-time delivery.',
   'Supported live deployment on Hostinger with an Nginx reverse proxy and PM2.',
 ]

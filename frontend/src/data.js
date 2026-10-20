@@ -10,4 +10,4 @@ export const PROJECTS=[
 ];
 export const SKILLS=[["🎨","Frontend",["React.js","Tailwind CSS","Context API","Bootstrap","PWA"]],["⚙️","Backend",["NestJS","Node.js","Express.js","JWT","RBAC","Cron jobs"]],["🗄️","Data and tools",["PostgreSQL","Prisma","MongoDB","Git","Nginx","PM2"]]];
 export const TECH=["React.js","NestJS","PostgreSQL","Prisma ORM","Tailwind CSS","JWT","Node.js","MongoDB","WhatsApp API","Google Maps API","Nginx","PM2"];
-export const ROLES=["Full Stack Developer","React.js Developer","NestJS Engineer"];
+export const ROLES=["Full Stack Developer","React.js Developer","NestJS Developer","MERN Stack Developer",];
