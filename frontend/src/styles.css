@@ -141,8 +141,8 @@ body{overflow-x:clip}
 .dnav a.link::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--p),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 .dnav a.link:hover,.dnav a.link.active{color:var(--p)}
 .dnav a.link:hover::after,.dnav a.link.active::after{transform:scaleX(1)}
-.burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;place-content:center;gap:5px;padding:0;transition:background .2s,border-color .2s}
-.burger:hover{background:var(--soft);border-color:rgba(147,51,234,.28)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:0;background:transparent;cursor:pointer;place-content:center;gap:5px;padding:0;transition:background .2s,color .2s}
+.burger:hover{background:var(--soft)}
 .burger span{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .3s,opacity .2s}
 .burger span:nth-child(2){width:14px;margin-left:auto}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -154,7 +154,7 @@ body{overflow-x:clip}
 .drawer.open{transform:none;visibility:visible}
 .dhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .dhead .brand{display:flex;align-items:center;gap:12px;font:500 1.15rem "Work Sans",sans-serif}
-.dclose{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:1.05rem;cursor:pointer;transition:background .2s,color .2s}
+.dclose{width:42px;height:42px;border-radius:12px;border:0;background:transparent;color:var(--ink);font-size:1.05rem;cursor:pointer;transition:background .2s,color .2s}
 .dclose:hover{background:var(--soft);color:var(--p)}
 .dlinks{display:flex;flex-direction:column;gap:5px}
 .dlinks a{display:flex;align-items:center;min-height:50px;padding:12px 15px;border:1px solid transparent;border-left:3px solid transparent;border-radius:10px;text-decoration:none;font:500 1.08rem "Work Sans",sans-serif;color:var(--muted);opacity:0;transform:translateX(18px);transition:opacity .35s,transform .35s,background .2s,color .2s;transition-delay:calc(var(--i)*50ms + 120ms)}

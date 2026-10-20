@@ -9,6 +9,7 @@ const CODE = `<span class="k">const</span> <span class="v">haritha</span> = {
     <span class="s">"PostgreSQL"</span>],
   auth: <span class="s">"JWT + RBAC"</span>,
   projects: <span class="n">7</span>,
+  deployment: ["Hostinger", "Nginx", "PM2"],
   openToWork: <span class="b">true</span>,
 };`
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -133,10 +134,12 @@ function Hero() {
     <div className="hero" id="home">
       <div className="l">
         <h1>Hello, I’m<br />Haritha Shree G</h1>
-        <p>
-          I’m a <u>{role}</u><span className="caret" /> based in Erode, India. I build fast, user-friendly
-          websites and apps with React.js, NestJS and PostgreSQL, from clean interfaces to secure APIs, for real client businesses.
-        </p>
+       <p>
+  I’m a <u>{role}</u><span className="caret" /> from Erode, India,
+  specializing in React.js, NestJS, and PostgreSQL. I build responsive
+  web applications, secure APIs, and reliable solutions for real-world
+  business needs.
+</p>
         <div className="row">
           <a className="btn" href="#contact">Say Hello!</a>
           <a className="btn alt" href="#projects">View work</a>
@@ -247,7 +250,7 @@ const Experience = () => (
     <div {...aos()}><span className="pill">Experience</span><h2 className="sh">Where I’ve worked</h2></div>
     <div className="card exp">
       <h3 style={{ fontSize: '1.5rem' }}>Full Stack Developer</h3>
-      <p className="meta">Luisant Software Solutions, Salem · Oct 2025 to present</p>
+      <p className="meta">Luisant Software Solutions, Salem · Oct 2025 - present</p>
       <ul>{POINTS.map((x) => <li key={x}>{x}</li>)}</ul>
     </div>
     <div className="edu">
