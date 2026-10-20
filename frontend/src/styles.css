@@ -165,6 +165,25 @@ body{overflow-x:clip}
 .dfoot .btn{text-align:center}
 .note{display:flex;gap:12px;align-items:flex-start;background:var(--soft);border:1px solid rgba(147,51,234,.16);border-radius:14px;padding:14px 18px;margin:-20px 0 32px;font-size:.92rem;max-width:760px;color:var(--ink)}
 .cta .btn{overflow-wrap:anywhere}
+.contact-section{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--p),var(--pink));border-radius:24px;margin:60px 16px;box-shadow:0 20px 50px rgba(147,51,234,.35)}
+.contact-section .cta{max-width:900px;margin:0 auto;position:relative;z-index:2;padding:70px 24px;text-align:center}
+.connect-wrap{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 16px;font:600 .85rem "Work Sans",sans-serif;color:#fff;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;display:inline-flex}
+.connect-badge{font-size:1rem}
+.contact-section h2{font:700 clamp(2.2rem,6.5vw,3.6rem) "Work Sans",sans-serif;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:10px}
+.contact-section h2 .work{background:linear-gradient(135deg,#f43f9a,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.contact-section .subtitle{color:rgba(255,255,255,.9);font-size:1.05rem;max-width:64ch;margin:0 auto 28px;line-height:1.6}
+.contact-section .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-bottom:10px}
+.btn.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 18px;font-weight:500;font-size:.9rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s,color .2s;border:0;cursor:pointer}
+.btn.pill svg.icon{width:18px;height:18px;flex-shrink:0}
+.btn.pill.email{background:#fff;color:var(--p);box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.btn.pill.email svg.icon{color:var(--p)}
+.btn.pill.email svg.arrow{width:16px;height:16px;stroke-width:2}
+.btn.pill:not(.email){background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px)}
+.btn.pill:not(.email) svg.icon{color:#fff}
+.btn.pill:hover{transform:translateY(-2px)}
+.btn.pill.email:hover{box-shadow:0 16px 40px rgba(147,51,234,.35)}
+.paper-plane{position:absolute;top:24px;right:40px;opacity:.55;font-size:2rem;pointer-events:none;transform:rotate(-15deg)}
+@media (max-width:620px){.cta .row .btn{width:100%;justify-content:center}.paper-plane{right:20px;font-size:1.5rem}}
 @media (max-width:900px){.dnav{display:none}.burger{display:grid}header .wrap{height:70px}section{padding:72px 0}}
 @media (max-width:620px){.wrap{padding:0 18px}.hero{padding:34px 0 48px;gap:36px}.stats{padding:16px 14px;gap:8px}.stats b{font-size:1.3rem}.stats span{font-size:.78rem}.row .btn{flex:1 1 auto;text-align:center}.cta{padding:48px 20px;border-radius:22px}.cta .row .btn{width:100%;text-align:center}.pb{padding:20px}.mock{height:160px}.card{padding:22px}.proj{padding:0}.exp li{font-size:.95rem}.note{margin-top:-24px}.tag.a{left:6px;bottom:30px}.tag.b{right:6px;top:22px}.code{aspect-ratio:auto;min-height:300px}}
 @media (prefers-reduced-motion:reduce){.drawer,.scrim,.dlinks a,.burger span{transition-duration:.01ms;transition-delay:0s}}

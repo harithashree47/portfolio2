@@ -264,20 +264,37 @@ const Experience = () => (
 )
 
 const Contact = () => (
-  <section id="contact" style={{ paddingTop: 20 }}>
-    <div className="cta">
-      <h2>Let’s work together</h2>
-      <p>I’m open to full stack roles with teams that care about thoughtful, reliable products.</p>
-      <div className="row" style={{ justifyContent: 'center' }}>
-        <a className="btn" href="mailto:harithashree3047@gmail.com">harithashree3047@gmail.com</a>
-        <a className="btn alt" href={RESUME} download>Download resume</a>
-        <a className="btn alt" href="tel:8015715345">8015715345</a>
-        <a className="btn alt" href="https://github.com/harithashree47" rel="noopener">GitHub</a>
-        <a className="btn alt" href="https://linkedin.com/in/harithashree-gr01" rel="noopener">LinkedIn</a>
+  <div id="contact" className="cta contact-section" style={{ paddingTop: 20 }}>
+     
+      <h2>Let’s <span className="work">work</span> together</h2>
+      <p className="subtitle">I’m open to full stack roles with teams that care about thoughtful, reliable products.</p>
+      <div className="row">
+        <a className="btn pill email" href="mailto:harithashree3047@gmail.com" aria-label="Email">
+          <svg className="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          harithashree3047@gmail.com
+          <svg className="icon arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a className="btn pill resume" href={RESUME} download aria-label="Download resume">
+          <svg className="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download resume
+        </a>
+        <a className="btn pill phone" href="tel:8015715345" aria-label="Phone">
+          <svg className="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          8015715345
+        </a>
+        <a className="btn pill github" href="https://github.com/harithashree47" rel="noopener" aria-label="GitHub">
+          <svg className="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-4.77 0-2.08-2.25-3.77-5-4.71a9.97 9.97 0 0 0-3.82 0c-2.75.94-5 2.63-5 4.71a3.37 3.37 0 0 0-.94 2.61v3.87m0 0c.24.01.47-.02.73-.09a9 9 0 0 0-.73-.09 9 9 0 0 0-.73-.09 9 9 0 0 0-.73-.09 9 9 0 0 0-.73-.09c1 .13 2 .52 2 1.41a2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-.89 1-1.28 2-1.41 0 0-.01-.01-.02-.03 4.31-.62 5.64-1.75 5.64-3.74 0-2 1-3.87-3-4.17 2 .3 2.89 1.7 2.89 2.91v2.2c0 1.97-1 3.66-2.57 4.32a9 9 0 0 1-.73.09c.01 0 .01 0 .02.01 1 .13 2 .52 2 1.41a2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-.89 1-1.28 2-1.41l.01-.01 1-.01c1 .13 2 .52 2 1.41a2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-.89 1-1.28 2-1.41l.01-.01 1-.01c2.47-.44 4.31-2.11 4.31-4.17 0-1.21-.89-2.59-2.1-3.21a9 9 0 0 0-.73-.09 9 9 0 0 0-.73-.09c-2.44-.45-4.46-1.4-5.64-3.74 0 0-.01-.01-.02-.03 2-.02 4.45 1.64 4.45 3.74 0 2.37-1.33 4.12-2.89 4.71a2 2 0 0 1-2 2c0 1 .73 1.78 1.73 1.99a9 9 0 0 1-.73.09 9 9 0 0 1-.73.09"/></svg>
+          GitHub
+        </a>
+        <a className="btn pill linkedin" href="https://linkedin.com/in/harithashree-gr01" rel="noopener" aria-label="LinkedIn">
+          <svg className="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
       </div>
+     
     </div>
-  </section>
-)
+
+);
 
 export default function App() {
   const bar = useRef(null)
