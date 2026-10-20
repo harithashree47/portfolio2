@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import AOS from 'aos'
+import ScrollTop from './components/ScrollTop'
 import { PROJECTS, SKILLS, TECH, ROLES } from './data.js'
 
 const CODE = `<span class="k">const</span> <span class="v">haritha</span> = {
@@ -264,7 +265,7 @@ const Experience = () => (
 
 const Contact = () => (
   <section id="contact" style={{ paddingTop: 20 }}>
-    <div className="cta" {...aos()}>
+    <div className="cta">
       <h2>Let’s work together</h2>
       <p>I’m open to full stack roles with teams that care about thoughtful, reliable products.</p>
       <div className="row" style={{ justifyContent: 'center' }}>
@@ -299,6 +300,7 @@ export default function App() {
         <Hero /><Marquee /><About /><Skills /><Projects /><Experience /><Contact />
       </main>
       <footer>© Haritha Shree G · Erode, Tamil Nadu</footer>
+      <ScrollTop />
     </>
   )
 }

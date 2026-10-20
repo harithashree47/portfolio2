@@ -18,7 +18,7 @@ nav{display:flex;align-items:center;gap:30px;font-size:.92rem;font-weight:500}
 nav a{text-decoration:none}
 nav a:hover{color:var(--p)}
 .btn{display:inline-block;background:var(--p);color:#fff;padding:12px 24px;border-radius:6px;font-weight:500;font-size:.95rem;text-decoration:none;border:0;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(147,51,234,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(147,51,234,.35);color:#fff}
 .btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
 .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center;padding:84px 0 70px}
 .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:600}
@@ -168,3 +168,60 @@ body{overflow-x:clip}
 @media (max-width:900px){.dnav{display:none}.burger{display:grid}header .wrap{height:70px}section{padding:72px 0}}
 @media (max-width:620px){.wrap{padding:0 18px}.hero{padding:34px 0 48px;gap:36px}.stats{padding:16px 14px;gap:8px}.stats b{font-size:1.3rem}.stats span{font-size:.78rem}.row .btn{flex:1 1 auto;text-align:center}.cta{padding:48px 20px;border-radius:22px}.cta .row .btn{width:100%;text-align:center}.pb{padding:20px}.mock{height:160px}.card{padding:22px}.proj{padding:0}.exp li{font-size:.95rem}.note{margin-top:-24px}.tag.a{left:6px;bottom:30px}.tag.b{right:6px;top:22px}.code{aspect-ratio:auto;min-height:300px}}
 @media (prefers-reduced-motion:reduce){.drawer,.scrim,.dlinks a,.burger span{transition-duration:.01ms;transition-delay:0s}}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 32px rgba(20, 27, 52, .12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(24px) scale(.92);
+  transition: opacity .4s cubic-bezier(.2, .7, .2, 1), transform .4s cubic-bezier(.2, .7, .2, 1), box-shadow .2s, border-color .2s, background .2s, color .2s;
+  outline: 0;
+}
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.scroll-top svg {
+  width: 16px;
+  height: 16px;
+  transition: inherit;
+}
+.scroll-top:hover {
+  background: var(--p);
+  color: #fff;
+  border-color: var(--p);
+  box-shadow: 0 20px 40px rgba(147, 51, 234, .5);
+}
+.scroll-top:hover svg {
+  transform: translateY(-2px);
+}
+.scroll-top:active {
+  transform: translateY(0) scale(.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top,
+  .scroll-top.show {
+    transition-duration: .01ms;
+    transition-delay: 0s;
+    transform: none;
+  }
+}
+
