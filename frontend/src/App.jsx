@@ -11,7 +11,7 @@ const CODE = `<span class="k">const</span> <span class="v">haritha</span> = {
   openToWork: <span class="b">true</span>,
 };`
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-const aos = (type, delay = 0) => ({ 'data-aos': type, 'data-aos-delay': delay })
+const aos = () => ({ 'data-aos': 'fade-up' })
 
 function useTyped(words) {
   const [text, setText] = useState(words[0])
@@ -114,7 +114,7 @@ function Header() {
         </div>
         <div className="dlinks">
           {NAV.map(([name, id], i) => (
-            <a key={id} href={'#' + id} style={{ '--i': i }} className={active === id ? 'active' : ''} onClick={close}>{name}</a>
+            <a key={id} href={'#' + id} style={{ '--i': i }} className={active === id ? 'active' : ''} aria-current={active === id ? 'page' : undefined} onClick={close}>{name}</a>
           ))}
         </div>
         <div className="dfoot">
@@ -170,11 +170,11 @@ const Marquee = () => (
 const About = () => (
   <section id="about">
     <div className="about">
-      <div {...aos('fade-right')}>
+      <div {...aos()}>
         <span className="pill">About me</span>
         <h2 className="sh">Building products people enjoy using.</h2>
       </div>
-      <div {...aos('fade-left', 100)}>
+      <div>
         <p>With over a year of experience, I develop and maintain full-stack websites and apps for live clients. I design JWT-secured REST APIs, integrate services like WhatsApp Business API and Google Maps, and create reusable, responsive interfaces.</p>
         <p>I work well in Agile teams and have resolved 20+ production issues with an 88% on-time delivery rate.</p>
       </div>
@@ -184,10 +184,10 @@ const About = () => (
 
 const Skills = () => (
   <section id="skills" style={{ paddingTop: 20 }}>
-    <div {...aos('fade-up')}><span className="pill">Skills</span><h2 className="sh">What I work with</h2></div>
+    <div {...aos()}><span className="pill">Skills</span><h2 className="sh">What I work with</h2></div>
     <div className="skills">
-      {SKILLS.map(([icon, title, list], i) => (
-        <div className="card" key={title} {...aos('fade-up', i * 100)}>
+      {SKILLS.map(([icon, title, list]) => (
+        <div className="card" key={title}>
           <div className="ico">{icon}</div><h3>{title}</h3><Chips list={list} />
         </div>
       ))}
@@ -198,7 +198,7 @@ const Skills = () => (
 function Project({ p, n }) {
   const feat = n === 0
   return (
-    <div className={'cell' + (feat ? ' span2' : '')} {...aos('fade-up', feat ? 0 : (n % 2) * 100)}>
+    <div className={'cell' + (feat ? ' span2' : '')}>
       <article className={'card proj' + (feat ? ' feat' : '')}>
         <div className="mock" aria-hidden="true" style={{ background: `linear-gradient(135deg,${p.g[0]}30,${p.g[1]}3d)` }}>
           <div className="win">
@@ -227,7 +227,7 @@ function Project({ p, n }) {
 
 const Projects = () => (
   <section id="projects">
-    <div {...aos('fade-up')}><span className="pill">Portfolio</span><h2 className="sh">Projects I’ve built</h2></div>
+    <div {...aos()}><span className="pill">Portfolio</span><h2 className="sh">Projects I’ve built</h2></div>
     <p className="note"><span aria-hidden="true">🔒</span><span>Most of these projects were built for clients and employers, so source code and live links are confidential. I’m happy to walk through any of them in an interview.</span></p>
     <div className="grid">{PROJECTS.map((p, i) => <Project key={p.t} p={p} n={i} />)}</div>
   </section>
@@ -243,18 +243,18 @@ const POINTS = [
 
 const Experience = () => (
   <section id="experience">
-    <div {...aos('fade-up')}><span className="pill">Experience</span><h2 className="sh">Where I’ve worked</h2></div>
-    <div className="card exp" {...aos('fade-up', 100)}>
+    <div {...aos()}><span className="pill">Experience</span><h2 className="sh">Where I’ve worked</h2></div>
+    <div className="card exp">
       <h3 style={{ fontSize: '1.5rem' }}>Full Stack Developer</h3>
       <p className="meta">Luisant Software Solutions, Salem · Oct 2025 to present</p>
       <ul>{POINTS.map((x) => <li key={x}>{x}</li>)}</ul>
     </div>
     <div className="edu">
-      <div className="card" {...aos('fade-right')}>
+      <div className="card">
         <h3>B.Tech, Information Technology</h3>
         <p className="meta">Vivekanandha College of Technology for Women, Tiruchengode<br />Aug 2019 to Mar 2023 · CGPA 8.6 / 10</p>
       </div>
-      <div className="card" {...aos('fade-left', 100)}>
+      <div className="card">
         <h3>MERN Stack Certification</h3>
         <p className="meta">ETS Academy, Erode · 6-month internship<br />Built the WonNet Jobs portal with JWT, role-based access and email notifications.</p>
       </div>
@@ -264,7 +264,7 @@ const Experience = () => (
 
 const Contact = () => (
   <section id="contact" style={{ paddingTop: 20 }}>
-    <div className="cta" {...aos('zoom-in')}>
+    <div className="cta" {...aos()}>
       <h2>Let’s work together</h2>
       <p>I’m open to full stack roles with teams that care about thoughtful, reliable products.</p>
       <div className="row" style={{ justifyContent: 'center' }}>
@@ -281,7 +281,7 @@ const Contact = () => (
 export default function App() {
   const bar = useRef(null)
   useEffect(() => {
-    AOS.init({ duration: 800, once: true, offset: 70, disable: () => reduce })
+    AOS.init({ duration: 350, once: true, mirror: false, offset: 80, easing: 'ease-out-cubic', disable: () => reduce })
     const onScroll = () => {
       const d = document.documentElement
       const k = d.scrollTop / (d.scrollHeight - d.clientHeight || 1)
