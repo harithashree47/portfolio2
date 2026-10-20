@@ -146,9 +146,9 @@ function Hero() {
           <a className="btn alt" href={RESUME} download>Download resume</a>
         </div>
         <div className="stats">
-          <div><Count to={1} suffix="+ Y." /><span>experience</span></div>
+          <div><Count to={1} suffix=" +" /><span>Years of experience</span></div>
           <div><Count to={7} suffix=" +" /><span>websites &amp; apps</span></div>
-          <div><Count to={3} suffix="+" /><span>live clients</span></div>
+          <div><Count to={3} suffix=" +" /><span>live clients</span></div>
         </div>
       </div>
       <div className="portrait float">
